@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <title>
+      {{ page.title }} &middot; Primer
+    </title>
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/primer.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/docs.css">
+
+    <script src="{{ site.baseurl }}/bower_components/jquery/dist/jquery.js"></script>
+    <script src="{{ site.baseurl }}/bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <script src="{{ site.baseurl }}/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="{{ site.baseurl }}/bower_components/DataTables/media/js/jquery.dataTables.js"></script>
+    <script src="{{ site.baseurl }}/bower_components/d3/d3.js"></script>
+    <script src="{{ site.baseurl }}/bower_components/c3/c3.js"></script>
+    <script src="{{ site.baseurl }}/bower_components/angular/angular.js"></script>
+    <script src="{{ site.baseurl }}/js/ng-capstrap.js"></script>
+    <script>
+      angular.module('app', ['ngCapstrap']);
+    </script>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" href="{{ site.baseurl }}/img/apple-touch-icon-precomposed.png">
+    <link rel="icon" href="{{ site.baseurl }}/favicon.ico">
+  </head>
+  <body>
+
+    <header class="masthead">
+      <div class="container">
+        <a href="{{ site.baseurl }}/" class="masthead-logo">
+          <span class="mega-octicon octicon-package"></span>
+          Capstrap Lite
+        </a>
+
+        <nav class="masthead-nav">
+          <a {% if page.layout == "page" %}class="active"{% endif %} href="{{ site.baseurl }}/scaffolding">Docs</a>
+          <a {% if page.layout == "pageGettingStarted" %}class="active"{% endif %} href="{{ site.baseurl }}/getting_started">Getting Started</a>
+          <a {% if page.layout == "dashobard" %}class="active"{% endif %} href="{{ site.baseurl }}/dashboard">Dashboard</a>
+          <a href="{{ site.gitlab.repo }}/tree/master" target="_blank">Gitlab</a>
+          <!-- <a {% if page.title == "About" %}class="active"{% endif %} href="{{ site.baseurl }}/about">About</a>
+          <a href="{{ site.github.repo }}" target="_blank">GitHub</a>
+          <a href="{{ site.github.repo }}/blob/master/README.md#install" target="_blank">Install</a> -->
+        </nav>
+      </div>
+    </header>
+
+    {% if page.title == "Home" %}
+      <div class="jumbotron">
+        <div class="container">
+          <h1>Capstrap Lite</h1>
+          <p>The CSS toolkit and guidelines.  <small>Support Chrome, Firefox, Safari, IE Edge</small></p>
+
+          <a href="{{ site.baseurl }}/scaffolding/" class="btn btn-outline-default">
+            Read the docs
+          </a>
+          <a class="btn text-white" href="http://10.62.13.91:8080/wcc723/capstrap2/tree/master/source/dist">Download CSS</a>
+        </div>
+      </div>
+
+      <div class="container about-that">
+        <div class="row">
+          <div class="col-sm-4">
+            <h2>建構在 Bootstrap 之上</h2>
+            <p>這套Framework是建構在Bootstrap之上，所以其相依的套件都能夠正常使用，除此之外還增加了許多元件。</p>
+          </div>
+          <div class="col-sm-4">
+            <h2>設計風格</h2>
+            <p>設計上參考了Google Material Design 的卡片式設計以及優雅的淺陰影。</p>
+          </div>
+          <div class="col-sm-4">
+            <h2>大量擴充</h2>
+            <p>元件的更新上比其他CSS模組更具有彈性，所以可以依據需求調整增加模組。</p>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+
+    <div class="container">
+      {{ content }}
+
+      <footer class="footer">
+        Copyright Casper {{ site.time | date: '%Y' }}.
+        Version {{ site.version }}.
+        <br>
+        Created and maintained by the Web team at CSA.
+      </footer>
+    </div>
+
+    <script src="{{ site.baseurl }}/js/anchor.min.js"></script>
+    <script>
+      var selector = '.markdown-body h2, .markdown-body h3';
+      addAnchors(selector);
+    </script>
+  </body>
+</html>

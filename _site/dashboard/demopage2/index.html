@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <title>
+      Demo page 2 &middot; Primer
+    </title>
+    <link rel="stylesheet" href="/css/primer.css">
+    <link rel="stylesheet" href="/docs.css">
+
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/bower_components/DataTables/media/js/jquery.dataTables.js"></script>
+    <script src="/bower_components/d3/d3.js"></script>
+    <script src="/bower_components/c3/c3.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script>
+      app = angular.module('app', []);
+    </script>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" href="/img/apple-touch-icon-precomposed.png">
+    <link rel="icon" href="/favicon.ico">
+  </head>
+  <body class="has-navpanel-fixed has-navbar-fixed navbar-is-top">
+    <nav class="navbar navbar-default main-nav navbar-fixed-top">
+      <a href="#" class="navbar-navpanel hide-navpanel-btn"><i class="glyphicon glyphicon-menu-hamburger"></i><span></span></a>
+      <div class="navbar-header"><a href="/" class="navbar-brand">  Capstrap 2</a></div>
+      <div class="container-fluid">
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class=active><a href="/">Demo</a></li>
+            <!-- <li><a href="/">Dashboard Getting Started</a></li> -->
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/">Back</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <nav class="navpanel navpanel-fixed-left">
+  <div class="navpanel-container navpanel-flex navpanel-inverse">
+      <header style="background: url('/images/header.jpg'); height: 150px;background-size: cover" class="navpanel-header navpanel-text"></header>
+      <div class="navpanel-body">
+        <h5 class="navpanel-title"><span class="navpanel-text">Basic Demo</span></h5>
+        <ul class="nav navpanel-nav has-icon">
+          <li class="">
+            <a href="/dashboard/"><i class="navpanel-icon glyphicon glyphicon-home"></i>
+            <span class="navpanel-text">Home</span>
+            </a>
+          </li>
+          <li class=""><a href="/dashboard/demopage"><i class="navpanel-icon glyphicon glyphicon-link"></i>
+            <span class="navpanel-text">Demo page</span>
+            <span class="badge bg-danger">2</span>
+          </a></li>
+          <li class="active"><a href="/dashboard/demopage2"><i class="navpanel-icon glyphicon glyphicon-link"></i>
+            <span class="navpanel-text">Demo page 2</span>
+            <span class="badge bg-primary">2</span>
+          </a></li>
+        </ul>
+        <h5 class="navpanel-title"><span class="navpanel-text">Js Demo</span></h5>
+        <ul class="nav navpanel-nav has-icon">
+          <li class="">
+            <a href="#"><i class="navpanel-icon glyphicon glyphicon-plus"></i>
+            <span class="navpanel-text">Jquery UI</span> <i class="caret"></i></a>
+            <ul class="nav">
+              <li class=""><a href="/dashboard/datepicker">
+              <i class="navpanel-icon glyphicon glyphicon-calendar"></i>
+              <span class="navpanel-text">DatePicker</span></a></li>
+              <li class=""><a href="#">
+              <span class="navpanel-text">Sample</span></a></li>
+            </ul>
+          </li>
+        </ul>
+        <h5 class="navpanel-title"><span class="navpanel-text">Disabled</span></h5>
+        <ul class="nav navpanel-nav has-icon">
+          <li class="disabled">
+            <a href="#"><i class="glyphicon glyphicon-ban-circle"></i>
+            <span class="navpanel-text">Disabled</span></a>
+          </li>
+          <li>
+            <a href="#" class="disabled">
+              <span class="navpanel-text">Disabled</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <footer class="navpanel-footer">
+          <div class="text-muted clearfix text-right">
+              <span class="navpanel-text pull-left">Design By Casper</span>
+              <div class="dropdown dropup inline-block">
+                  <a href="#" data-toggle="dropdown" class="dropdown-toggle"><i class="navpanel-icon glyphicon glyphicon-th-large"></i></a>
+                  <ul class="dropdown-menu">
+                      <li><a href="#" id="hide-navpanel-text">Hide navpanel text</a></li>
+                      <li><a href="#">Setting</a></li>
+                      <li class="divider"></li>
+                      <li><a href="#">Log out</a></li>
+                  </ul>
+              </div>
+          </div>
+      </footer>
+  </div>
+</nav>
+
+
+
+
+    <div class="container-fluid">
+      <nav class="navbar navbar-flex navbar-default row ">
+  <div class="container-fluid">
+    <ul id="myTabs" class="nav navbar-nav">
+      <li class="active"><a href="#home" id="home-tab">Home</a></li>
+      <li><a href="#profile" id="profile-tab">Profile</a></li>
+    </ul>
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div id="myTabContent" class="tab-content">
+  <div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
+    <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+  </div>
+  <div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
+    <p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+  </div>
+</div>
+
+<script>
+  $('#myTabs a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+</script>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"navbar navbar-flex navbar-default row "</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container-fluid"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">id=</span><span class="s">"xxx"</span> <span class="na">class=</span><span class="s">"nav navbar-nav"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#home"</span> <span class="na">id=</span><span class="s">"home-tab"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#profile"</span> <span class="na">id=</span><span class="s">"profile-tab"</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/div&gt;</span><span class="c">&lt;!-- /.container-fluid --&gt;</span>
+<span class="nt">&lt;/nav&gt;</span>
+
+<span class="nt">&lt;script&gt;</span>
+  <span class="nx">$</span><span class="p">(</span><span class="s1">'#xxx a'</span><span class="p">).</span><span class="nx">click</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">()</span>
+  <span class="nx">$</span><span class="p">(</span><span class="k">this</span><span class="p">).</span><span class="nx">tab</span><span class="p">(</span><span class="s1">'show'</span><span class="p">)</span>
+<span class="p">})</span>
+<span class="nt">&lt;/script&gt;</span></code></pre></div>
+
+
+
+      <footer class="footer">
+        Copyright GitHub 2015.<br>
+        Created and maintained by the CSS team at GitHub.
+      </footer>
+    </div>
+
+    <script src="/js/anchor.min.js"></script>
+    <script>
+      var selector = '.markdown-body h2, .markdown-body h3';
+      addAnchors(selector);
+    </script>
+    <script>
+    $(document).ready(function(){
+      $('#bg-color').on('click', function(e){
+        e.preventDefault();
+        $('body').toggleClass('theme-inverse');
+      });
+      $('.hide-navpanel-btn').on('click', function(e){
+        e.preventDefault();
+        $('body').toggleClass('hide-navpanel');
+      });
+
+      //menu
+      $('#hide-navpanel-text').on('click', function(e){
+        e.preventDefault();
+        $('body').toggleClass('hide-navpanel-text');
+      });
+      $('.navpanel-nav a').on('click', function(e){
+        $(this).parent('li').toggleClass('show')
+          .siblings('li').removeClass('show').find('li').removeClass('show');
+      });
+      $('.navpanel-nav li.active').parents('li').addClass('show');
+    });
+    </script>
+  </body>
+</html>

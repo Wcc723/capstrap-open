@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <title>
+      Utilities &middot; Primer
+    </title>
+    <link rel="stylesheet" href="/css/primer.css">
+    <link rel="stylesheet" href="/docs.css">
+
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/bower_components/DataTables/media/js/jquery.dataTables.js"></script>
+    <script src="/bower_components/d3/d3.js"></script>
+    <script src="/bower_components/c3/c3.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/js/ng-capstrap.js"></script>
+    <script>
+      angular.module('app', ['ngCapstrap']);
+    </script>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" href="/img/apple-touch-icon-precomposed.png">
+    <link rel="icon" href="/favicon.ico">
+  </head>
+  <body>
+
+    <header class="masthead">
+      <div class="container">
+        <a href="/" class="masthead-logo">
+          <span class="mega-octicon octicon-package"></span>
+          Capstrap Lite
+        </a>
+
+        <nav class="masthead-nav">
+          <a  href="/scaffolding">Docs</a>
+          <a  href="/getting_started">Getting Started</a>
+          <a  href="/dashboard">Dashboard</a>
+          <a href="http://10.62.13.91:8080/wcc723/capstrap2/tree/master" target="_blank">Gitlab</a>
+          <!-- <a  href="/about">About</a>
+          <a href="https://github.com/primer/primer" target="_blank">GitHub</a>
+          <a href="https://github.com/primer/primer/blob/master/README.md#install" target="_blank">Install</a> -->
+        </nav>
+      </div>
+    </header>
+
+    
+
+    <div class="container">
+      <div class="row docs-layout">
+  <div class="col-sm-3">
+    
+      <nav class="list-group">
+  <div class="list-group-item">
+    <h4>Basic CSS</h4>
+  </div>
+  <a class="list-group-item " href="/scaffolding/">
+    Scaffolding
+  </a>
+  <a class="list-group-item " href="/layout/">
+    Layout
+  </a>
+  <a class="list-group-item active" href="/utilities/">
+    Utilities
+  </a>
+  <a class="list-group-item " href="/type/">
+    Type
+  </a>
+  <a class="list-group-item " href="/buttons/">
+    Buttons
+  </a>
+  <a class="list-group-item " href="/forms/">
+    Forms
+  </a>
+  <a class="list-group-item " href="/loading/">
+    Loading
+  </a>
+  <!-- Components -->
+  <a class="list-group-item " href="/button-group/">
+    Button Group
+  </a>
+  <a class="list-group-item " href="/dropdown/">
+    Dropdown
+  </a>
+  <a class="list-group-item " href="/progress-bars/">
+    Progress bars
+  </a>
+  <a class="list-group-item " href="/alerts/">
+    Alerts
+  </a>
+  <a class="list-group-item " href="/navbar/">
+    Navbar
+  </a>
+  <!-- <a class="list-group-item " href="/helper/">
+    Helper
+  </a> -->
+
+  <!-- <a class="list-group-item " href="/nav/">
+    Navigation
+  </a>
+
+  <a class="list-group-item " href="/blankslate/">
+    Blankslate
+  </a>
+  <a class="list-group-item " href="/avatars/">
+    Avatars
+  </a>
+  <a class="list-group-item " href="/states/">
+    States
+  </a>
+  <a class="list-group-item " href="/tooltips/">
+    Tooltips
+  </a>
+  <a class="list-group-item active" href="/utilities/">
+    Utilities
+  </a> -->
+</nav>
+
+<nav class="list-group">
+  <div class="list-group-item">
+    <h4>CSS Plugin</h4>
+  </div>
+  <a class="list-group-item " href="/bootstrap-js/">
+    Bootstrap JS
+  </a>
+  <a class="list-group-item " href="/jquery-ui/">
+    Jquery UI
+  </a>
+  <a class="list-group-item " href="/jquery-datatables/">
+    Jquery DataTables
+  </a>
+  <a class="list-group-item " href="/angular-directive/">
+    Angular directive (<span class="text-danger">Test</span>)
+  </a>
+</nav>
+
+<nav class="list-group">
+  <a class="list-group-item " href="/guidelines/">
+    Code guidelines
+  </a>
+  <a class="list-group-item " href="/colors/">
+    Colors
+  </a>
+  <a class="list-group-item " href="/markdown/">
+    Markdown
+  </a>
+</nav>
+
+    
+  </div>
+  <div class="col-sm-9 column markdown-body">
+    <h1 class="page-title">
+      Utilities
+    </h1>
+    <div class="markdown-body">
+      <p>There are a handful of utilities in Primer for quick behaviors, floats, colors, alignment, and more.</p>
+
+<h2 id="contents">Contents</h2>
+
+<ul id="markdown-toc">
+  <li><a href="#contents" id="markdown-toc-contents">Contents</a></li>
+  <li><a href="#counter" id="markdown-toc-counter">Counter</a></li>
+  <li><a href="#close-icon" id="markdown-toc-close-icon">Close icon</a></li>
+  <li><a href="#carets" id="markdown-toc-carets">Carets</a></li>
+  <li><a href="#floats" id="markdown-toc-floats">Floats</a></li>
+  <li><a href="#text-alignment" id="markdown-toc-text-alignment">Text alignment</a></li>
+  <li><a href="#icons" id="markdown-toc-icons">Icons</a></li>
+  <li><a href="#centered-block" id="markdown-toc-centered-block">Centered block</a></li>
+  <li><a href="#contextual-backgrounds" id="markdown-toc-contextual-backgrounds">Contextual backgrounds</a></li>
+</ul>
+
+<h2 id="counter">Counter</h2>
+
+<p>Add a number or unread indicator to navs and more with a counter.</p>
+
+<div class="docs-example clearfix"><span class="label">9</span></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"label"</span><span class="nt">&gt;</span>9<span class="nt">&lt;/span&gt;</span></code></pre></div>
+
+<h2 id="close-icon">Close icon</h2>
+
+<p>Use the generic close icon for dismissing content like modals and alerts.</p>
+
+<div class="docs-example clearfix"><button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;&lt;/button&gt;</span></code></pre></div>
+
+<h2 id="carets">Carets</h2>
+
+<p>Use carets to indicate dropdown functionality and direction. Note that the default caret will reverse automatically in dropup menus.</p>
+
+<div class="docs-example clearfix"><span class="caret"></span></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"caret"</span><span class="nt">&gt;&lt;/span&gt;</span></code></pre></div>
+
+<h2 id="floats">Floats</h2>
+
+<p>Quickly float something to the left or right, and clear them later.</p>
+
+<div class="docs-example clearfix"><div class="clearfix">
+  <code class="pull-left">.left</code>
+  <code class="pull-right">.right</code>
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"clearfix"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;code</span> <span class="na">class=</span><span class="s">"pull-left"</span><span class="nt">&gt;</span>.left<span class="nt">&lt;/code&gt;</span>
+  <span class="nt">&lt;code</span> <span class="na">class=</span><span class="s">"pull-right"</span><span class="nt">&gt;</span>.right<span class="nt">&lt;/code&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h2 id="text-alignment">Text alignment</h2>
+
+<p>Change the <code>text-align</code> on elements with a class.</p>
+
+<div class="docs-example clearfix"><p class="text-left">Left aligned text.</p>
+<p class="text-right">Right aligned text.</p></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-left"</span><span class="nt">&gt;</span>Left aligned text.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"text-right"</span><span class="nt">&gt;</span>Right aligned text.<span class="nt">&lt;/p&gt;</span></code></pre></div>
+
+<h2 id="icons">Icons</h2>
+
+<div class="docs-example clearfix"><button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+<span class="caret"></span></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">aria-label=</span><span class="s">"Close"</span><span class="nt">&gt;&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"caret"</span><span class="nt">&gt;&lt;/span&gt;</span></code></pre></div>
+
+<h2 id="centered-block">Centered block</h2>
+
+<div class="docs-example clearfix"><div style="height: 150px">
+  <div class="centered">
+    this is a vertical centered block(only for support transform browser).
+  </div>
+</div></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"height: 150px"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"centered"</span><span class="nt">&gt;</span>
+    this is a vertical centered block(only for support transform browser).
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h2 id="contextual-backgrounds">Contextual backgrounds</h2>
+
+<p>Similar to the contextual text color classes, easily set the background of an element to any contextual class. Anchor components will darken on hover, just like the text classes.</p>
+
+<div class="docs-example clearfix"><p class="alert bg-primary">Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+<p class="alert bg-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+<p class="alert bg-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
+<p class="alert bg-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+<p class="alert bg-danger">Donec ullamcorper nulla non metus auctor fringilla.</p></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"alert bg-primary"</span><span class="nt">&gt;</span>Nullam id dolor id nibh ultricies vehicula ut id elit.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"alert bg-success"</span><span class="nt">&gt;</span>Duis mollis, est non commodo luctus, nisi erat porttitor ligula.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"alert bg-info"</span><span class="nt">&gt;</span>Maecenas sed diam eget risus varius blandit sit amet non magna.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"alert bg-warning"</span><span class="nt">&gt;</span>Etiam porta sem malesuada magna mollis euismod.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"alert bg-danger"</span><span class="nt">&gt;</span>Donec ullamcorper nulla non metus auctor fringilla.<span class="nt">&lt;/p&gt;</span></code></pre></div>
+
+<!-- ## Flex table
+
+Flex table is a module for creating dynamically resizable elements that always sit on the same horizontal line (e.g., they never break to a new line). Using table styles in our CSS means it's cross browser friendly back to at least IE9.
+
+Additional `margin` or `padding` may be required to properly space content.
+
+
+<div class="docs-example clearfix"><div class="flex-table">
+  <div class="flex-table-item flex-table-item-primary">
+    <input class="input-block" type="text" placeholder="Long flexible input form">
+  </div>
+  <div class="flex-table-item">
+    <button class="btn" type="button">Button</button>
+  </div>
+</div></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-table"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-table-item flex-table-item-primary"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"input-block"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"Long flexible input form"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flex-table-item"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn"</span> <span class="na">type=</span><span class="s">"button"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+ -->
+
+    </div>
+  </div>
+</div>
+
+
+      <footer class="footer">
+        Copyright Casper 2015.
+        Version 0.1.5.
+        <br>
+        Created and maintained by the Web team at CSA.
+      </footer>
+    </div>
+
+    <script src="/js/anchor.min.js"></script>
+    <script>
+      var selector = '.markdown-body h2, .markdown-body h3';
+      addAnchors(selector);
+    </script>
+  </body>
+</html>

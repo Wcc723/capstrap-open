@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <title>
+      Jquery UI &middot; Primer
+    </title>
+    <link rel="stylesheet" href="/css/primer.css">
+    <link rel="stylesheet" href="/docs.css">
+
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/bower_components/DataTables/media/js/jquery.dataTables.js"></script>
+    <script src="/bower_components/d3/d3.js"></script>
+    <script src="/bower_components/c3/c3.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/js/ng-capstrap.js"></script>
+    <script>
+      angular.module('app', ['ngCapstrap']);
+    </script>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" href="/img/apple-touch-icon-precomposed.png">
+    <link rel="icon" href="/favicon.ico">
+  </head>
+  <body>
+
+    <header class="masthead">
+      <div class="container">
+        <a href="/" class="masthead-logo">
+          <span class="mega-octicon octicon-package"></span>
+          Capstrap Lite
+        </a>
+
+        <nav class="masthead-nav">
+          <a  href="/scaffolding">Docs</a>
+          <a  href="/getting_started">Getting Started</a>
+          <a  href="/dashboard">Dashboard</a>
+          <a href="http://10.62.13.91:8080/wcc723/capstrap2/tree/master" target="_blank">Gitlab</a>
+          <!-- <a  href="/about">About</a>
+          <a href="https://github.com/primer/primer" target="_blank">GitHub</a>
+          <a href="https://github.com/primer/primer/blob/master/README.md#install" target="_blank">Install</a> -->
+        </nav>
+      </div>
+    </header>
+
+    
+
+    <div class="container">
+      <div class="row docs-layout">
+  <div class="col-sm-3">
+    
+      <nav class="list-group">
+  <div class="list-group-item">
+    <h4>Basic CSS</h4>
+  </div>
+  <a class="list-group-item " href="/scaffolding/">
+    Scaffolding
+  </a>
+  <a class="list-group-item " href="/layout/">
+    Layout
+  </a>
+  <a class="list-group-item " href="/utilities/">
+    Utilities
+  </a>
+  <a class="list-group-item " href="/type/">
+    Type
+  </a>
+  <a class="list-group-item " href="/buttons/">
+    Buttons
+  </a>
+  <a class="list-group-item " href="/forms/">
+    Forms
+  </a>
+  <a class="list-group-item " href="/loading/">
+    Loading
+  </a>
+  <!-- Components -->
+  <a class="list-group-item " href="/button-group/">
+    Button Group
+  </a>
+  <a class="list-group-item " href="/dropdown/">
+    Dropdown
+  </a>
+  <a class="list-group-item " href="/progress-bars/">
+    Progress bars
+  </a>
+  <a class="list-group-item " href="/alerts/">
+    Alerts
+  </a>
+  <a class="list-group-item " href="/navbar/">
+    Navbar
+  </a>
+  <!-- <a class="list-group-item " href="/helper/">
+    Helper
+  </a> -->
+
+  <!-- <a class="list-group-item " href="/nav/">
+    Navigation
+  </a>
+
+  <a class="list-group-item " href="/blankslate/">
+    Blankslate
+  </a>
+  <a class="list-group-item " href="/avatars/">
+    Avatars
+  </a>
+  <a class="list-group-item " href="/states/">
+    States
+  </a>
+  <a class="list-group-item " href="/tooltips/">
+    Tooltips
+  </a>
+  <a class="list-group-item " href="/utilities/">
+    Utilities
+  </a> -->
+</nav>
+
+<nav class="list-group">
+  <div class="list-group-item">
+    <h4>CSS Plugin</h4>
+  </div>
+  <a class="list-group-item " href="/bootstrap-js/">
+    Bootstrap JS
+  </a>
+  <a class="list-group-item active" href="/jquery-ui/">
+    Jquery UI
+  </a>
+  <a class="list-group-item " href="/jquery-datatables/">
+    Jquery DataTables
+  </a>
+  <a class="list-group-item " href="/angular-directive/">
+    Angular directive (<span class="text-danger">Test</span>)
+  </a>
+</nav>
+
+<nav class="list-group">
+  <a class="list-group-item " href="/guidelines/">
+    Code guidelines
+  </a>
+  <a class="list-group-item " href="/colors/">
+    Colors
+  </a>
+  <a class="list-group-item " href="/markdown/">
+    Markdown
+  </a>
+</nav>
+
+    
+  </div>
+  <div class="col-sm-9 column markdown-body">
+    <h1 class="page-title">
+      Jquery UI
+    </h1>
+    <div class="markdown-body">
+      <h2 id="datepicker">Datepicker</h2>
+
+<p><a href="http://jqueryui.com/datepicker/">http://jqueryui.com/datepicker/</a></p>
+
+<h3 id="default-functionality">Default functionality</h3>
+
+<p>The datepicker is tied to a standard form input field. Focus on the input (click, or use the tab key) to open an interactive calendar in a small overlay. Choose a date, click elsewhere on the page (blur the input), or hit the Esc key to close. If a date is chosen, feedback is shown as the input’s value.</p>
+
+<div class="docs-example clearfix"><input type="text" id="ui-datepicker" class="form-control" />
+<script>
+$(function() { $( "#ui-datepicker" ).datepicker();});
+</script></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"ui-datepicker"</span> <span class="na">class=</span><span class="s">"form-control"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">$</span><span class="p">(</span> <span class="s2">"#ui-datepicker"</span> <span class="p">).</span><span class="nx">datepicker</span><span class="p">();});</span>
+<span class="nt">&lt;/script&gt;</span></code></pre></div>
+
+<h3 id="display-button-bar">Display button bar</h3>
+
+<p>Display a button for selecting Today’s date and a Done button for closing the calendar with the boolean showButtonPanel option. Each button is enabled by default when the bar is displayed, but can be turned off with additional options. Button text is customizable.</p>
+
+<div class="docs-example clearfix"><input type="text" id="ui-datepicker-button-bar" class="form-control" />
+<script>
+  $(function() {
+    $( "#ui-datepicker-button-bar" ).datepicker({
+        showOtherMonths: true,
+        selectOtherMonths: true,
+        showButtonPanel: true
+      });
+  });
+</script></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"ui-datepicker-button-bar"</span> <span class="na">class=</span><span class="s">"form-control"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+  <span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">$</span><span class="p">(</span> <span class="s2">"#ui-datepicker-button-bar"</span> <span class="p">).</span><span class="nx">datepicker</span><span class="p">({</span>
+        <span class="na">showOtherMonths</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="na">selectOtherMonths</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="na">showButtonPanel</span><span class="p">:</span> <span class="kc">true</span>
+      <span class="p">});</span>
+  <span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span></code></pre></div>
+
+<h3 id="display-month-and-year-menu">Display Month and year menu</h3>
+
+<p>Show month and year dropdowns in place of the static month/year header to facilitate navigation through large timeframes. Add the boolean changeMonth and changeYear options.</p>
+
+<div class="docs-example clearfix"><input type="text" id="ui-datepicker-selectMonth" class="form-control" />
+<script>
+$(function() {
+  $( "#ui-datepicker-selectMonth" ).datepicker({
+      showOtherMonths: true,
+      selectOtherMonths: true,
+      showButtonPanel: true,
+      changeMonth: true,
+      changeYear: true
+    });
+});
+</script></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"ui-datepicker-selectMonth"</span> <span class="na">class=</span><span class="s">"form-control"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span> <span class="s2">"#ui-datepicker-selectMonth"</span> <span class="p">).</span><span class="nx">datepicker</span><span class="p">({</span>
+      <span class="na">showOtherMonths</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="na">selectOtherMonths</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="na">showButtonPanel</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="na">changeMonth</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="na">changeYear</span><span class="p">:</span> <span class="kc">true</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span></code></pre></div>
+
+<h3 id="select-date-range">Select date range</h3>
+
+<div class="docs-example clearfix"><input type="text" id="ui-datepicker-dateRange-from" class="form-control" />
+<input type="text" id="ui-datepicker-dateRange-to" class="form-control" />
+<script>
+$(function() {
+  $( "#ui-datepicker-dateRange-from" ).datepicker({
+      defaultDate: "+1w",
+      changeMonth: true,
+      numberOfMonths: 3,
+      onClose: function( selectedDate ) {
+        $( "#ui-datepicker-dateRange-to" ).datepicker( "option", "minDate", selectedDate );
+      }
+    });
+    $( "#ui-datepicker-dateRange-to" ).datepicker({
+      defaultDate: "+1w",
+      changeMonth: true,
+      numberOfMonths: 3,
+      onClose: function( selectedDate ) {
+        $( "#ui-datepicker-dateRange-from" ).datepicker( "option", "maxDate", selectedDate );
+      }
+    });
+});
+</script></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"ui-datepicker-dateRange-from"</span> <span class="na">class=</span><span class="s">"form-control"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">id=</span><span class="s">"ui-datepicker-dateRange-to"</span> <span class="na">class=</span><span class="s">"form-control"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span> <span class="s2">"#ui-datepicker-dateRange-from"</span> <span class="p">).</span><span class="nx">datepicker</span><span class="p">({</span>
+      <span class="na">defaultDate</span><span class="p">:</span> <span class="s2">"+1w"</span><span class="p">,</span>
+      <span class="na">changeMonth</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="na">numberOfMonths</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+      <span class="na">onClose</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">selectedDate</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span> <span class="s2">"#ui-datepicker-dateRange-to"</span> <span class="p">).</span><span class="nx">datepicker</span><span class="p">(</span> <span class="s2">"option"</span><span class="p">,</span> <span class="s2">"minDate"</span><span class="p">,</span> <span class="nx">selectedDate</span> <span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">});</span>
+    <span class="nx">$</span><span class="p">(</span> <span class="s2">"#ui-datepicker-dateRange-to"</span> <span class="p">).</span><span class="nx">datepicker</span><span class="p">({</span>
+      <span class="na">defaultDate</span><span class="p">:</span> <span class="s2">"+1w"</span><span class="p">,</span>
+      <span class="na">changeMonth</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="na">numberOfMonths</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+      <span class="na">onClose</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">selectedDate</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span> <span class="s2">"#ui-datepicker-dateRange-from"</span> <span class="p">).</span><span class="nx">datepicker</span><span class="p">(</span> <span class="s2">"option"</span><span class="p">,</span> <span class="s2">"maxDate"</span><span class="p">,</span> <span class="nx">selectedDate</span> <span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">});</span>
+<span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span></code></pre></div>
+
+<h2 id="slider">Slider</h2>
+
+<h3 id="default-functionality-1">Default functionality</h3>
+
+<p>The basic slider is horizontal and has a single handle that can be moved with the mouse or by using the arrow keys.</p>
+
+<div class="docs-example clearfix"><div id="ui-slider"></div>
+<script>
+$(function() {
+  $( "#ui-slider" ).slider();
+});
+</script></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"ui-slider"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span> <span class="s2">"#ui-slider"</span> <span class="p">).</span><span class="nx">slider</span><span class="p">();</span>
+<span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span></code></pre></div>
+
+<h3 id="range-slider">Range slider</h3>
+
+<p>Set the <code>range</code> option to true to capture a range of values with two drag handles. The space between the handles is filled with a different background color to indicate those values are selected.</p>
+
+<div class="docs-example clearfix"><div id="ui-slider-ranger"></div>
+<script>
+$(function() {
+  $( "#ui-slider-ranger" ).slider({
+      range: true,
+      min: 0,
+      max: 500,
+      values: [ 75, 300 ],
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+      }
+    });
+    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+      " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+});
+</script></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"ui-slider-ranger"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span> <span class="s2">"#ui-slider-ranger"</span> <span class="p">).</span><span class="nx">slider</span><span class="p">({</span>
+      <span class="na">range</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="na">min</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+      <span class="na">max</span><span class="p">:</span> <span class="mi">500</span><span class="p">,</span>
+      <span class="na">values</span><span class="p">:</span> <span class="p">[</span> <span class="mi">75</span><span class="p">,</span> <span class="mi">300</span> <span class="p">],</span>
+      <span class="na">slide</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">event</span><span class="p">,</span> <span class="nx">ui</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span> <span class="s2">"#amount"</span> <span class="p">).</span><span class="nx">val</span><span class="p">(</span> <span class="s2">"$"</span> <span class="o">+</span> <span class="nx">ui</span><span class="p">.</span><span class="nx">values</span><span class="p">[</span> <span class="mi">0</span> <span class="p">]</span> <span class="o">+</span> <span class="s2">" - $"</span> <span class="o">+</span> <span class="nx">ui</span><span class="p">.</span><span class="nx">values</span><span class="p">[</span> <span class="mi">1</span> <span class="p">]</span> <span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">});</span>
+    <span class="nx">$</span><span class="p">(</span> <span class="s2">"#amount"</span> <span class="p">).</span><span class="nx">val</span><span class="p">(</span> <span class="s2">"$"</span> <span class="o">+</span> <span class="nx">$</span><span class="p">(</span> <span class="s2">"#slider-range"</span> <span class="p">).</span><span class="nx">slider</span><span class="p">(</span> <span class="s2">"values"</span><span class="p">,</span> <span class="mi">0</span> <span class="p">)</span> <span class="o">+</span>
+      <span class="s2">" - $"</span> <span class="o">+</span> <span class="nx">$</span><span class="p">(</span> <span class="s2">"#slider-range"</span> <span class="p">).</span><span class="nx">slider</span><span class="p">(</span> <span class="s2">"values"</span><span class="p">,</span> <span class="mi">1</span> <span class="p">)</span> <span class="p">);</span>
+<span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span></code></pre></div>
+
+<h3 id="range-with-fixed-minimum">Range with fixed minimum</h3>
+
+<p>Fix the minimum value of the range slider so that the user can only select a maximum. Set the <code>range</code> option to “min.”</p>
+
+<div class="docs-example clearfix"><div id="ui-slider-min"></div>
+<script>
+$(function() {
+  $( "#ui-slider-min" ).slider({
+    range: "min",
+      value: 37,
+      min: 1,
+      max: 700,
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "$" + ui.value );
+      }
+  });
+});
+</script></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"ui-slider-min"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span> <span class="s2">"#ui-slider-min"</span> <span class="p">).</span><span class="nx">slider</span><span class="p">({</span>
+    <span class="na">range</span><span class="p">:</span> <span class="s2">"min"</span><span class="p">,</span>
+      <span class="na">value</span><span class="p">:</span> <span class="mi">37</span><span class="p">,</span>
+      <span class="na">min</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="na">max</span><span class="p">:</span> <span class="mi">700</span><span class="p">,</span>
+      <span class="na">slide</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">event</span><span class="p">,</span> <span class="nx">ui</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span> <span class="s2">"#amount"</span> <span class="p">).</span><span class="nx">val</span><span class="p">(</span> <span class="s2">"$"</span> <span class="o">+</span> <span class="nx">ui</span><span class="p">.</span><span class="nx">value</span> <span class="p">);</span>
+      <span class="p">}</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span></code></pre></div>
+
+<h3 id="vertical-range-slider">Vertical range slider</h3>
+
+<p>Change the orientation of the range slider to vertical. Assign a height value via <code>.height()</code> or by setting the height through CSS, and set the orientation option to “vertical.</p>
+
+<div class="docs-example clearfix"><div id="ui-slider-vertical"></div>
+<script>
+$(function() {
+  $( "#ui-slider-vertical" ).slider({
+    orientation: "vertical",
+      range: true,
+      values: [ 17, 67 ],
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+      }
+  });
+});
+</script></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"ui-slider-vertical"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">$</span><span class="p">(</span> <span class="s2">"#ui-slider-vertical"</span> <span class="p">).</span><span class="nx">slider</span><span class="p">({</span>
+    <span class="na">orientation</span><span class="p">:</span> <span class="s2">"vertical"</span><span class="p">,</span>
+      <span class="na">range</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="na">values</span><span class="p">:</span> <span class="p">[</span> <span class="mi">17</span><span class="p">,</span> <span class="mi">67</span> <span class="p">],</span>
+      <span class="na">slide</span><span class="p">:</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">event</span><span class="p">,</span> <span class="nx">ui</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span> <span class="s2">"#amount"</span> <span class="p">).</span><span class="nx">val</span><span class="p">(</span> <span class="s2">"$"</span> <span class="o">+</span> <span class="nx">ui</span><span class="p">.</span><span class="nx">values</span><span class="p">[</span> <span class="mi">0</span> <span class="p">]</span> <span class="o">+</span> <span class="s2">" - $"</span> <span class="o">+</span> <span class="nx">ui</span><span class="p">.</span><span class="nx">values</span><span class="p">[</span> <span class="mi">1</span> <span class="p">]</span> <span class="p">);</span>
+      <span class="p">}</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span></code></pre></div>
+
+<h2 id="auto-complete">Auto Complete</h2>
+
+<p><a href="http://jqueryui.com/autocomplete/">http://jqueryui.com/autocomplete/</a></p>
+
+<h3 id="default-functionality-2">Default functionality</h3>
+
+<p>The Autocomplete widgets provides suggestions while you type into the field. Here the suggestions are tags for programming languages, give “ja” (for Java or JavaScript) a try.</p>
+
+<div class="docs-example clearfix"><label for="tags">Tags: </label>
+<input id="tags" class="form-control" />
+<script>
+$(function() {
+  var availableTags = [
+    "ActionScript",
+    "AppleScript",
+    "Asp",
+    "BASIC",
+    "C",
+    "C++",
+    "Clojure",
+    "COBOL",
+    "ColdFusion",
+    "Erlang",
+    "Fortran",
+    "Groovy",
+    "Haskell",
+    "Java",
+    "JavaScript",
+    "Lisp",
+    "Perl",
+    "PHP",
+    "Python",
+    "Ruby",
+    "Scala",
+    "Scheme"
+  ];
+  $( "#tags" ).autocomplete({
+    source: availableTags
+  });
+});
+</script></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"tags"</span><span class="nt">&gt;</span>Tags: <span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"tags"</span> <span class="na">class=</span><span class="s">"form-control"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;script&gt;</span>
+<span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+  <span class="kd">var</span> <span class="nx">availableTags</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s2">"ActionScript"</span><span class="p">,</span>
+    <span class="s2">"AppleScript"</span><span class="p">,</span>
+    <span class="s2">"Asp"</span><span class="p">,</span>
+    <span class="s2">"BASIC"</span><span class="p">,</span>
+    <span class="s2">"C"</span><span class="p">,</span>
+    <span class="s2">"C++"</span><span class="p">,</span>
+    <span class="s2">"Clojure"</span><span class="p">,</span>
+    <span class="s2">"COBOL"</span><span class="p">,</span>
+    <span class="s2">"ColdFusion"</span><span class="p">,</span>
+    <span class="s2">"Erlang"</span><span class="p">,</span>
+    <span class="s2">"Fortran"</span><span class="p">,</span>
+    <span class="s2">"Groovy"</span><span class="p">,</span>
+    <span class="s2">"Haskell"</span><span class="p">,</span>
+    <span class="s2">"Java"</span><span class="p">,</span>
+    <span class="s2">"JavaScript"</span><span class="p">,</span>
+    <span class="s2">"Lisp"</span><span class="p">,</span>
+    <span class="s2">"Perl"</span><span class="p">,</span>
+    <span class="s2">"PHP"</span><span class="p">,</span>
+    <span class="s2">"Python"</span><span class="p">,</span>
+    <span class="s2">"Ruby"</span><span class="p">,</span>
+    <span class="s2">"Scala"</span><span class="p">,</span>
+    <span class="s2">"Scheme"</span>
+  <span class="p">];</span>
+  <span class="nx">$</span><span class="p">(</span> <span class="s2">"#tags"</span> <span class="p">).</span><span class="nx">autocomplete</span><span class="p">({</span>
+    <span class="na">source</span><span class="p">:</span> <span class="nx">availableTags</span>
+  <span class="p">});</span>
+<span class="p">});</span>
+<span class="nt">&lt;/script&gt;</span></code></pre></div>
+
+
+    </div>
+  </div>
+</div>
+
+
+      <footer class="footer">
+        Copyright Casper 2015.
+        Version 0.1.5.
+        <br>
+        Created and maintained by the Web team at CSA.
+      </footer>
+    </div>
+
+    <script src="/js/anchor.min.js"></script>
+    <script>
+      var selector = '.markdown-body h2, .markdown-body h3';
+      addAnchors(selector);
+    </script>
+  </body>
+</html>

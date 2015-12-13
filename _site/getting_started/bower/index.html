@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <title>
+      Use Bower &middot; Primer
+    </title>
+    <link rel="stylesheet" href="/css/primer.css">
+    <link rel="stylesheet" href="/docs.css">
+
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/bower_components/DataTables/media/js/jquery.dataTables.js"></script>
+    <script src="/bower_components/d3/d3.js"></script>
+    <script src="/bower_components/c3/c3.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/js/ng-capstrap.js"></script>
+    <script>
+      angular.module('app', ['ngCapstrap']);
+    </script>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" href="/img/apple-touch-icon-precomposed.png">
+    <link rel="icon" href="/favicon.ico">
+  </head>
+  <body>
+
+    <header class="masthead">
+      <div class="container">
+        <a href="/" class="masthead-logo">
+          <span class="mega-octicon octicon-package"></span>
+          Capstrap Lite
+        </a>
+
+        <nav class="masthead-nav">
+          <a  href="/scaffolding">Docs</a>
+          <a  href="/getting_started">Getting Started</a>
+          <a  href="/dashboard">Dashboard</a>
+          <a href="http://10.62.13.91:8080/wcc723/capstrap2/tree/master" target="_blank">Gitlab</a>
+          <!-- <a  href="/about">About</a>
+          <a href="https://github.com/primer/primer" target="_blank">GitHub</a>
+          <a href="https://github.com/primer/primer/blob/master/README.md#install" target="_blank">Install</a> -->
+        </nav>
+      </div>
+    </header>
+
+    
+
+    <div class="container">
+      <div class="row docs-layout">
+  <div class="col-sm-3">
+    <nav class="list-group">
+  <div class="list-group-item">
+    <h4>Getting Start</h4>
+  </div>
+  <a class="list-group-item " href="/getting_started/">
+    開始使用
+  </a>
+  <a class="list-group-item active" href="/getting_started/bower">
+    透過 Bower
+  </a>
+  <a class="list-group-item disabled "  href="#">
+    Example
+  </a>
+</nav>
+
+
+
+  </div>
+  <div class="col-sm-9 column markdown-body">
+    <h1 class="page-title">
+      Use Bower
+    </h1>
+    <div class="markdown-body">
+      <p>本框架是基於<code>Bootstrap</code> (currently 0.1.5) 之上，並額外增加許多元件，所以熟悉使用<code>Bootstrap</code>的開發者，在使用上會容易許多。然而我們也提供不同的方式，讓開發者可以快速使用<strong>Capstrap</strong>。</p>
+
+<h2 id="bower-">透過Bower 安裝</h2>
+
+<p>你希望可以自己管理<code>capstrap</code>的版本，那你可以透過bower 來安裝，這也是我們所推薦的方式，指令如下。</p>
+
+<div class="highlight"><pre><code class="language-shell" data-lang="shell">bower install http://10.62.13.91:8080/wcc723/capstrap2.git#</code></pre></div>
+
+<p>不過注意，這需要在 <strong>富鴻網</strong> 下才能夠使用。</p>
+
+<h4 id="sass">自行編譯 sass</h4>
+
+<p>如果有編譯的需求，我們推薦使用<code>gulp</code> + <code>compass</code>，而相關的範例已經放在以下目錄。</p>
+
+<div class="highlight"><pre><code class="language-txt" data-lang="txt">dist/
+├── docs/
+├── ng-capstrap/
+└── source/
+    ├── config.rb.example
+    └── gulpfile.js.example</code></pre></div>
+
+<p>請將<code>config.rb.example</code>後方的example移除，並將內部的<code>additional_import_paths</code>換成bower的路徑。</p>
+
+<p>再將<code>gulpfile.js.example</code>的compass task修改成您目前的sass目錄。<em>(注意：使用gulp 請安裝相依node package)</em></p>
+
+
+    </div>
+  </div>
+</div>
+
+
+      <footer class="footer">
+        Copyright Casper 2015.
+        Version 0.1.5.
+        <br>
+        Created and maintained by the Web team at CSA.
+      </footer>
+    </div>
+
+    <script src="/js/anchor.min.js"></script>
+    <script>
+      var selector = '.markdown-body h2, .markdown-body h3';
+      addAnchors(selector);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <title>
+      Colors &middot; Primer
+    </title>
+    <link rel="stylesheet" href="/css/primer.css">
+    <link rel="stylesheet" href="/docs.css">
+
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/jquery-ui/jquery-ui.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="/bower_components/DataTables/media/js/jquery.dataTables.js"></script>
+    <script src="/bower_components/d3/d3.js"></script>
+    <script src="/bower_components/c3/c3.js"></script>
+    <script src="/bower_components/angular/angular.js"></script>
+    <script src="/js/ng-capstrap.js"></script>
+    <script>
+      angular.module('app', ['ngCapstrap']);
+    </script>
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" href="/img/apple-touch-icon-precomposed.png">
+    <link rel="icon" href="/favicon.ico">
+  </head>
+  <body>
+
+    <header class="masthead">
+      <div class="container">
+        <a href="/" class="masthead-logo">
+          <span class="mega-octicon octicon-package"></span>
+          Capstrap Lite
+        </a>
+
+        <nav class="masthead-nav">
+          <a  href="/scaffolding">Docs</a>
+          <a  href="/getting_started">Getting Started</a>
+          <a  href="/dashboard">Dashboard</a>
+          <a href="http://10.62.13.91:8080/wcc723/capstrap2/tree/master" target="_blank">Gitlab</a>
+          <!-- <a  href="/about">About</a>
+          <a href="https://github.com/primer/primer" target="_blank">GitHub</a>
+          <a href="https://github.com/primer/primer/blob/master/README.md#install" target="_blank">Install</a> -->
+        </nav>
+      </div>
+    </header>
+
+    
+
+    <div class="container">
+      <div class="row docs-layout">
+  <div class="col-sm-3">
+    
+      <nav class="list-group">
+  <div class="list-group-item">
+    <h4>Basic CSS</h4>
+  </div>
+  <a class="list-group-item " href="/scaffolding/">
+    Scaffolding
+  </a>
+  <a class="list-group-item " href="/layout/">
+    Layout
+  </a>
+  <a class="list-group-item " href="/utilities/">
+    Utilities
+  </a>
+  <a class="list-group-item " href="/type/">
+    Type
+  </a>
+  <a class="list-group-item " href="/buttons/">
+    Buttons
+  </a>
+  <a class="list-group-item " href="/forms/">
+    Forms
+  </a>
+  <a class="list-group-item " href="/loading/">
+    Loading
+  </a>
+  <!-- Components -->
+  <a class="list-group-item " href="/button-group/">
+    Button Group
+  </a>
+  <a class="list-group-item " href="/dropdown/">
+    Dropdown
+  </a>
+  <a class="list-group-item " href="/progress-bars/">
+    Progress bars
+  </a>
+  <a class="list-group-item " href="/alerts/">
+    Alerts
+  </a>
+  <a class="list-group-item " href="/navbar/">
+    Navbar
+  </a>
+  <!-- <a class="list-group-item " href="/helper/">
+    Helper
+  </a> -->
+
+  <!-- <a class="list-group-item " href="/nav/">
+    Navigation
+  </a>
+
+  <a class="list-group-item " href="/blankslate/">
+    Blankslate
+  </a>
+  <a class="list-group-item " href="/avatars/">
+    Avatars
+  </a>
+  <a class="list-group-item " href="/states/">
+    States
+  </a>
+  <a class="list-group-item " href="/tooltips/">
+    Tooltips
+  </a>
+  <a class="list-group-item " href="/utilities/">
+    Utilities
+  </a> -->
+</nav>
+
+<nav class="list-group">
+  <div class="list-group-item">
+    <h4>CSS Plugin</h4>
+  </div>
+  <a class="list-group-item " href="/bootstrap-js/">
+    Bootstrap JS
+  </a>
+  <a class="list-group-item " href="/jquery-ui/">
+    Jquery UI
+  </a>
+  <a class="list-group-item " href="/jquery-datatables/">
+    Jquery DataTables
+  </a>
+  <a class="list-group-item " href="/angular-directive/">
+    Angular directive (<span class="text-danger">Test</span>)
+  </a>
+</nav>
+
+<nav class="list-group">
+  <a class="list-group-item " href="/guidelines/">
+    Code guidelines
+  </a>
+  <a class="list-group-item active" href="/colors/">
+    Colors
+  </a>
+  <a class="list-group-item " href="/markdown/">
+    Markdown
+  </a>
+</nav>
+
+    
+  </div>
+  <div class="col-sm-9 column markdown-body">
+    <h1 class="page-title">
+      Colors
+    </h1>
+    <div class="markdown-body">
+      <p>The look and feel of our company and product relies on using a handful of specific colors that help convey meaning and purpose.</p>
+
+<h3 id="branding">Branding</h3>
+
+<p>Basic brand color.</p>
+
+<div class="swatch bg-primary"></div>
+<div class="swatch bg-info"></div>
+<div class="swatch bg-danger"></div>
+<div class="swatch bg-warning"></div>
+<div class="swatch bg-dark"></div>
+
+<p>More daker.</p>
+
+<div class="swatch bg-primary-dark"></div>
+<div class="swatch bg-info-dark"></div>
+<div class="swatch bg-danger-dark"></div>
+<div class="swatch bg-warning-dark"></div>
+<div class="swatch bg-dark-dark"></div>
+
+<p>More lighten.</p>
+
+<div class="swatch bg-primary-light"></div>
+<div class="swatch bg-info-light"></div>
+<div class="swatch bg-danger-light"></div>
+<div class="swatch bg-warning-light"></div>
+<div class="swatch bg-dark-light"></div>
+
+<h3 id="grayscale">Grayscale</h3>
+
+<div class="swatch bg-black"></div>
+<div class="swatch bg-gray-darker"></div>
+<div class="swatch bg-gray-dark"></div>
+<div class="swatch bg-gray"></div>
+<div class="swatch bg-gray-light"></div>
+<div class="swatch bg-gray-lighter"></div>
+
+    </div>
+  </div>
+</div>
+
+
+      <footer class="footer">
+        Copyright Casper 2015.
+        Version 0.1.5.
+        <br>
+        Created and maintained by the Web team at CSA.
+      </footer>
+    </div>
+
+    <script src="/js/anchor.min.js"></script>
+    <script>
+      var selector = '.markdown-body h2, .markdown-body h3';
+      addAnchors(selector);
+    </script>
+  </body>
+</html>
