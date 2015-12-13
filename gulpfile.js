@@ -3,6 +3,7 @@ var gulp = require('gulp'),
   plumber = require('gulp-plumber'),
   sass = require('gulp-sass'),
   watch = require('gulp-watch'),
+  scsslint = require('gulp-scss-lint'),
   batch = require('gulp-batch');
 
 // 定義路徑
@@ -34,13 +35,28 @@ gulp.task('sass', function() {
 });
 
 
+// sass lint
+gulp.task('scss-lint', function() {
+  return gulp.src('./assets/stylesheets/**/**.scss')
+    .pipe(plumber())
+    .pipe(scsslint({
+      'config': './lint.yml',
+      'maxBuffer': 3072000,
+      'filePipeOutput': 'scssReport.json'
+    }))
+    .pipe(gulp.dest('./reports'));
+});
+
 // 監聽資料夾事件
 gulp.task('watch', function () {
   watch('./assets/stylesheets/**/**.scss', batch(function (events, done) {
     gulp.start('sass', done);
   }));
+  watch('./assets/stylesheets/**/**.scss', batch(function (events, done) {
+    gulp.start('scss-lint', done);
+  }));
 });
 
-gulp.task('default', ['watch','sass']);
+gulp.task('default', ['watch','sass', 'scss-lint']);
 
 
