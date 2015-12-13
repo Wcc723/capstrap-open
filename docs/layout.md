@@ -32,34 +32,36 @@ The grid is pretty standard—you create rows with `.columns` and individual col
 
 In practice, your columns will look like the example below.
 
+僅保留 `xs` 以及 `sm` 兩種尺寸的 grid-system。
+
 {% example html %}
 <div class="bs-docs-grid">
     <div class="row show-grid">
-      <div class="col-md-1">.col-md-1</div>
-      <div class="col-md-1">.col-md-1</div>
-      <div class="col-md-1">.col-md-1</div>
-      <div class="col-md-1">.col-md-1</div>
-      <div class="col-md-1">.col-md-1</div>
-      <div class="col-md-1">.col-md-1</div>
-      <div class="col-md-1">.col-md-1</div>
-      <div class="col-md-1">.col-md-1</div>
-      <div class="col-md-1">.col-md-1</div>
-      <div class="col-md-1">.col-md-1</div>
-      <div class="col-md-1">.col-md-1</div>
-      <div class="col-md-1">.col-md-1</div>
+      <div class="col-sm-1">.col-sm-1</div>
+      <div class="col-sm-1">.col-sm-1</div>
+      <div class="col-sm-1">.col-sm-1</div>
+      <div class="col-sm-1">.col-sm-1</div>
+      <div class="col-sm-1">.col-sm-1</div>
+      <div class="col-sm-1">.col-sm-1</div>
+      <div class="col-sm-1">.col-sm-1</div>
+      <div class="col-sm-1">.col-sm-1</div>
+      <div class="col-sm-1">.col-sm-1</div>
+      <div class="col-sm-1">.col-sm-1</div>
+      <div class="col-sm-1">.col-sm-1</div>
+      <div class="col-sm-1">.col-sm-1</div>
     </div>
     <div class="row show-grid">
-      <div class="col-md-8">.col-md-8</div>
-      <div class="col-md-4">.col-md-4</div>
+      <div class="col-sm-8">.col-sm-8</div>
+      <div class="col-sm-4">.col-sm-4</div>
     </div>
     <div class="row show-grid">
-      <div class="col-md-4">.col-md-4</div>
-      <div class="col-md-4">.col-md-4</div>
-      <div class="col-md-4">.col-md-4</div>
+      <div class="col-sm-4">.col-sm-4</div>
+      <div class="col-sm-4">.col-sm-4</div>
+      <div class="col-sm-4">.col-sm-4</div>
     </div>
     <div class="row show-grid">
-      <div class="col-md-6">.col-md-6</div>
-      <div class="col-md-6">.col-md-6</div>
+      <div class="col-sm-6">.col-sm-6</div>
+      <div class="col-sm-6">.col-sm-6</div>
     </div>
   </div>
 {% endexample %}

@@ -31,6 +31,8 @@ You can find them in two sizes: the default `.btn` and the smaller `.btn-sm`.
 
 ## Option
 
+移除了 `warning`、`info` 的按鈕。
+
 {% example html %}
 <!-- 標準按鈕，在大部分一般選項使用 -->
 <button type="button" class="btn btn-default">Default</button>
@@ -69,20 +71,17 @@ You can find them in two sizes: the default `.btn` and the smaller `.btn-sm`.
 Outline buttons downplay an action as they appear like boxy links. Just add `.btn-outline-{option}` and go.
 
 {% example html %}
-<button type="button" class="btn btn-outline-primary">Primary</button>
-<button type="button" class="btn btn-outline-success">Success</button>
-<button type="button" class="btn btn-outline-info">Info</button>
-<button type="button" class="btn btn-outline-warning">Warning</button>
-<button type="button" class="btn btn-outline-dark">Dark</button>
-<button type="button" class="btn btn-outline-danger">Danger</button>
+<button type="button" class="btn btn-primary-outline">Primary</button>
+<button type="button" class="btn btn-success-outline">Success</button>
+<button type="button" class="btn btn-danger-outline">Danger</button>
 {% endexample %}
 
 Similar other buttons, Outline button with the `.disabled` class to **disabled**.
 
 {% example html %}
-<button type="button" class="btn btn-outline-primary">Primary</button>
-<button type="button" class="btn btn-outline-primary disabled">Primary</button>
-<button type="button" class="btn btn-outline-primary active">Primary</button>
+<button type="button" class="btn btn-primary-outline">Primary</button>
+<button type="button" class="btn btn-primary-outline disabled">Primary</button>
+<button type="button" class="btn btn-primary-outline active">Primary</button>
 {% endexample %}
 
 

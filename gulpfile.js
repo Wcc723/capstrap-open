@@ -30,33 +30,34 @@ var path = {
 gulp.task('sass', function() {
   return gulp.src(['./assets/stylesheets/**/**.scss'])
   .pipe(plumber())
-  .pipe(sass().on('error', sass.logError))
+  .pipe(sass(/*{outputStyle: 'compressed'}*/)
+  .on('error', sass.logError))
     .pipe(gulp.dest('./docs/css'))
 });
 
 
 // sass lint
-gulp.task('scss-lint', function() {
-  return gulp.src('./assets/stylesheets/**/**.scss')
-    .pipe(plumber())
-    .pipe(scsslint({
-      'config': './lint.yml',
-      'maxBuffer': 3072000,
-      'filePipeOutput': 'scssReport.json'
-    }))
-    .pipe(gulp.dest('./reports'));
-});
+// gulp.task('scss-lint', function() {
+//   return gulp.src('./assets/stylesheets/**/**.scss')
+//     .pipe(plumber())
+//     .pipe(scsslint({
+//       'config': './lint.yml',
+//       'maxBuffer': 3072000,
+//       'filePipeOutput': 'scssReport.json'
+//     }))
+//     .pipe(gulp.dest('./reports'));
+// });
 
 // 監聽資料夾事件
 gulp.task('watch', function () {
   watch('./assets/stylesheets/**/**.scss', batch(function (events, done) {
     gulp.start('sass', done);
   }));
-  watch('./assets/stylesheets/**/**.scss', batch(function (events, done) {
-    gulp.start('scss-lint', done);
-  }));
+  // watch('./assets/stylesheets/**/**.scss', batch(function (events, done) {
+  //   gulp.start('scss-lint', done);
+  // }));
 });
 
-gulp.task('default', ['watch','sass', 'scss-lint']);
+gulp.task('default', ['watch','sass']);
 
 
