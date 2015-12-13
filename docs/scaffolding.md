@@ -61,10 +61,12 @@ For improved cross-browser rendering, we use [Normalize.css](http://necolas.gith
     - @import 'bootstrap/input-groups';
     - @import 'bootstrap/navs';
     - @import 'bootstrap/navbar';
-    	- 修改成 bootstrap 4的樣式
+        - 修改成 bootstrap 4的樣式
     - @import 'bootstrap/breadcrumbs';
     - @import 'bootstrap/pagination';
+        - 移除
     - @import 'bootstrap/pager';
+        - 移除
     - @import 'bootstrap/labels';
     - @import 'bootstrap/badges';
     - @import 'bootstrap/jumbotron';
@@ -73,11 +75,11 @@ For improved cross-browser rendering, we use [Normalize.css](http://necolas.gith
         - 移除
     - @import 'bootstrap/alerts';
     - @import 'bootstrap/progress-bars';
-    	- 移除
+        - 移除
     - @import 'bootstrap/media';
         - 移除
     - @import 'bootstrap/list-group';
-    	- 移除
+        - 移除
     - @import 'bootstrap/panels';
         - 移除
     - @import 'bootstrap/responsive-embed';
@@ -87,9 +89,9 @@ For improved cross-browser rendering, we use [Normalize.css](http://necolas.gith
 - Javascript
     - @import 'bootstrap/modals';
     - @import 'bootstrap/tooltip';
-    	- 移除
+        - 移除
     - @import 'bootstrap/popovers';
-    	- 移除
+        - 移除
     - @import 'bootstrap/carousel';
         - 移除
 - Utility classes

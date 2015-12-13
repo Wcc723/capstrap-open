@@ -32,7 +32,7 @@ The grid is pretty standard—you create rows with `.columns` and individual col
 
 In practice, your columns will look like the example below.
 
-僅保留 `xs` 以及 `sm` 兩種尺寸的 grid-system。
+預設保留 `xs` 以及 `sm` 兩種尺寸的 grid-system，其餘可以在 `_variable.scss` 的 `$grid-{size}-enabled` 選擇。
 
 {% example html %}
 <div class="bs-docs-grid">

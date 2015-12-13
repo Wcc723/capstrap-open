@@ -33,6 +33,8 @@ You can find them in two sizes: the default `.btn` and the smaller `.btn-sm`.
 
 移除了 `warning`、`info` 的按鈕。
 
+可以在 `_variable.scss`的`$btn-box-shadow-enabled`選擇是否需要陰影。
+
 {% example html %}
 <!-- 標準按鈕，在大部分一般選項使用 -->
 <button type="button" class="btn btn-default">Default</button>
@@ -69,6 +71,8 @@ You can find them in two sizes: the default `.btn` and the smaller `.btn-sm`.
 ## Outline
 
 Outline buttons downplay an action as they appear like boxy links. Just add `.btn-outline-{option}` and go.
+
+可以自行`_variable.scss`的`$btn-outline-enabled`選擇是否載入，約 5kb 。
 
 {% example html %}
 <button type="button" class="btn btn-primary-outline">Primary</button>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="app">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,17 +15,8 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/css/primer.css">
     <link rel="stylesheet" href="{{ site.baseurl }}/docs.css">
 
-    <script src="{{ site.baseurl }}/bower_components/jquery/dist/jquery.js"></script>
-    <script src="{{ site.baseurl }}/bower_components/jquery-ui/jquery-ui.min.js"></script>
-    <script src="{{ site.baseurl }}/bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="{{ site.baseurl }}/bower_components/DataTables/media/js/jquery.dataTables.js"></script>
-    <script src="{{ site.baseurl }}/bower_components/d3/d3.js"></script>
-    <script src="{{ site.baseurl }}/bower_components/c3/c3.js"></script>
-    <script src="{{ site.baseurl }}/bower_components/angular/angular.js"></script>
-    <script src="{{ site.baseurl }}/js/ng-capstrap.js"></script>
-    <script>
-      angular.module('app', ['ngCapstrap']);
-    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <!-- Favicons -->
     <link rel="apple-touch-icon-precomposed" href="{{ site.baseurl }}/img/apple-touch-icon-precomposed.png">
     <link rel="icon" href="{{ site.baseurl }}/favicon.ico">
@@ -42,8 +33,6 @@
         <nav class="masthead-nav">
           <a {% if page.layout == "page" %}class="active"{% endif %} href="{{ site.baseurl }}/scaffolding">Docs</a>
           <a {% if page.layout == "pageGettingStarted" %}class="active"{% endif %} href="{{ site.baseurl }}/getting_started">Getting Started</a>
-          <a {% if page.layout == "dashobard" %}class="active"{% endif %} href="{{ site.baseurl }}/dashboard">Dashboard</a>
-          <a href="{{ site.gitlab.repo }}/tree/master" target="_blank">Gitlab</a>
           <!-- <a {% if page.title == "About" %}class="active"{% endif %} href="{{ site.baseurl }}/about">About</a>
           <a href="{{ site.github.repo }}" target="_blank">GitHub</a>
           <a href="{{ site.github.repo }}/blob/master/README.md#install" target="_blank">Install</a> -->
@@ -89,7 +78,6 @@
         Copyright Casper {{ site.time | date: '%Y' }}.
         Version {{ site.version }}.
         <br>
-        Created and maintained by the Web team at CSA.
       </footer>
     </div>
 

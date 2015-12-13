@@ -174,49 +174,34 @@ $table-border-color:            #ddd !default;
 //## For each of Bootstrap's buttons, define text, background and border color.
 
 $btn-font-weight:                normal !default;
+$btn-box-shadow-enabled:         true   !default;
+$btn-outline-enabled:            true  !default;
 
 $btn-default-color:              #333 !default;
 $btn-default-bg:                 #fff !default;
 $btn-default-border:             #ccc !default;
-
-$btn-primary-color:              #fff !default;
-$btn-primary-bg:                 $brand-primary !default;
-$btn-primary-border:             darken($btn-primary-bg, 5%) !default;
-
-$btn-success-color:              #fff !default;
-$btn-success-bg:                 $brand-success !default;
-$btn-success-border:             darken($btn-success-bg, 5%) !default;
-
-$btn-info-color:                 #fff !default;
-$btn-info-bg:                    $brand-info !default;
-$btn-info-border:                darken($btn-info-bg, 5%) !default;
-
-$btn-warning-color:              #fff !default;
-$btn-warning-bg:                 $brand-warning !default;
-$btn-warning-border:             darken($btn-warning-bg, 5%) !default;
-
-$btn-danger-color:               #fff !default;
-$btn-danger-bg:                  $brand-danger !default;
-$btn-danger-border:              darken($btn-danger-bg, 5%) !default;
 
 $btn-config:(
   default:(
     class: 'default',
     color: #333,
     bg: #fff,
-    border-color: #ccc
+    border-color: #ccc,
+    btn-box-shadow: false
   ),
   primary:(
     class: 'primary',
     color: #fff,
     bg: $brand-primary,
-    border-color: darken($brand-primary, 0)
+    border-color: darken($brand-primary, 0),
+    btn-box-shadow: $btn-box-shadow-enabled
   ),
   success:(
     class: 'success',
     color: #fff,
     bg: $brand-success,
-    border-color: darken($brand-success, 0)
+    border-color: darken($brand-success, 0),
+    btn-box-shadow: $btn-box-shadow-enabled
   ),
   // info:(
   //   class: 'info',
@@ -234,7 +219,8 @@ $btn-config:(
     class: 'danger',
     color: #fff,
     bg: $brand-danger,
-    border-color: darken($brand-danger, 0)
+    border-color: darken($brand-danger, 0),
+    btn-box-shadow: $btn-box-shadow-enabled
   )
 );
 
@@ -410,19 +396,19 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
 $container-tablet:             (720px + $grid-gutter-width) !default;
 //** For `$screen-sm-min` and up.
 $container-sm:                 $container-tablet !default;
-$grid-sm-enable:               true;
+$grid-sm-enabled:               true;
 
 // Medium screen / desktop
 $container-desktop:            (940px + $grid-gutter-width) !default;
 //** For `$screen-md-min` and up.
 $container-md:                 $container-desktop !default;
-$grid-md-enable:               false;
+$grid-md-enabled:               false;
 
 // Large screen / wide desktop
 $container-large-desktop:      (1140px + $grid-gutter-width) !default;
 //** For `$screen-lg-min` and up.
 $container-lg:                 $container-large-desktop !default;
-$grid-lg-enable:               false;
+$grid-lg-enabled:               false;
 
 
 //== Navbar
@@ -437,17 +423,17 @@ $navbar-padding-horizontal:        floor(($grid-gutter-width / 2)) !default;
 $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2) !default;
 $navbar-collapse-max-height:       340px !default;
 
-$navbar-default-color:             #777 !default;
+$navbar-default-color:             rgba(black, .5) !default; //#777 !default;
 $navbar-default-bg:                #f8f8f8 !default;
 $navbar-default-border:            darken($navbar-default-bg, 6.5%) !default;
 
 // Navbar links
-$navbar-default-link-color:                #777 !default;
-$navbar-default-link-hover-color:          #333 !default;
+$navbar-default-link-color:                rgba(black, .5) !default;
+$navbar-default-link-hover-color:          rgba(black, .7) !default;
 $navbar-default-link-hover-bg:             transparent !default;
-$navbar-default-link-active-color:         #555 !default;
-$navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;
-$navbar-default-link-disabled-color:       #ccc !default;
+$navbar-default-link-active-color:         rgba(black, .6) !default;
+$navbar-default-link-active-bg:            rgba(black, .05) !default; //darken($navbar-default-bg, 6.5%) !default;
+$navbar-default-link-disabled-color:       rgba(black, .3) !default;
 $navbar-default-link-disabled-bg:          transparent !default;
 
 // Navbar brand label
@@ -456,24 +442,24 @@ $navbar-default-brand-hover-color:         darken($navbar-default-brand-color, 1
 $navbar-default-brand-hover-bg:            transparent !default;
 
 // Navbar toggle
-$navbar-default-toggle-hover-bg:           #ddd !default;
-$navbar-default-toggle-icon-bar-bg:        #888 !default;
-$navbar-default-toggle-border-color:       #ddd !default;
+$navbar-default-toggle-hover-bg:           rgba(black, .1) !default; //#ddd !default;
+$navbar-default-toggle-icon-bar-bg:        rgba(black, .3) !default; //#888 !default;
+$navbar-default-toggle-border-color:       rgba(black, .1) !default; //#ddd !default;
 
 
-//=== Inverted navbar
+// Inverted navbar
 // Reset inverted navbar basics
-$navbar-inverse-color:                      lighten($gray-light, 15%) !default;
-$navbar-inverse-bg:                         #222 !default;
+$navbar-inverse-color:                      rgba(white, .75)!default; //lighten($gray-light, 15%) !default;
+$navbar-inverse-bg:                         #333!default; //#474D57 !default;
 $navbar-inverse-border:                     darken($navbar-inverse-bg, 10%) !default;
 
 // Inverted navbar links
-$navbar-inverse-link-color:                 lighten($gray-light, 15%) !default;
-$navbar-inverse-link-hover-color:           #fff !default;
+$navbar-inverse-link-color:                 rgba(white, .85)!default; //lighten($gray-light, 15%) !default;
+$navbar-inverse-link-hover-color:           white !default; //#fff !default;
 $navbar-inverse-link-hover-bg:              transparent !default;
 $navbar-inverse-link-active-color:          $navbar-inverse-link-hover-color !default;
-$navbar-inverse-link-active-bg:             darken($navbar-inverse-bg, 10%) !default;
-$navbar-inverse-link-disabled-color:        #444 !default;
+$navbar-inverse-link-active-bg:             rgba(black, .1) !default; //darken($navbar-inverse-bg, 10%) !default;
+$navbar-inverse-link-disabled-color:        rgba(white, .5) !default; //#444 !default;
 $navbar-inverse-link-disabled-bg:           transparent !default;
 
 // Inverted navbar brand label
@@ -482,7 +468,7 @@ $navbar-inverse-brand-hover-color:          #fff !default;
 $navbar-inverse-brand-hover-bg:             transparent !default;
 
 // Inverted navbar toggle
-$navbar-inverse-toggle-hover-bg:            #333 !default;
+$navbar-inverse-toggle-hover-bg:            rgba(white, .15) !default; //#333 !default;
 $navbar-inverse-toggle-icon-bar-bg:         #fff !default;
 $navbar-inverse-toggle-border-color:        #333 !default;
 

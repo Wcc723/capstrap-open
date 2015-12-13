@@ -68,9 +68,10 @@ a.btn {
   $color: map-get($value, color);
   $bg: map-get($value, bg);
   $border-color: map-get($value, border-color);
+  $btn-box-shadow: map-get($value, btn-box-shadow);
 
   .btn-#{$class}{
-    @include button-variant($color, $bg, $border-color);
+    @include button-variant($color, $bg, $border-color, $btn-box-shadow);
   }
 }
 
@@ -78,16 +79,19 @@ a.btn {
 // Alternate buttons
 // --------------------------------------------------
 
-@each $name, $value in $btn-config {
-  $class: map-get($value, class);
-  $color: map-get($value, color);
-  $bg: map-get($value, bg);
-  $border-color: map-get($value, border-color);
+@if ($btn-outline-enabled) {
+  @each $name, $value in $btn-config {
+    $class: map-get($value, class);
+    $color: map-get($value, color);
+    $bg: map-get($value, bg);
+    $border-color: map-get($value, border-color);
 
-  .btn-#{$class}-outline {
-    @include button-ghost-variant($border-color, transparent, $border-color);
+    .btn-#{$class}-outline {
+      @include button-ghost-variant($border-color, transparent, $border-color);
+    }
   }
 }
+
 
 
 // Link buttons
