@@ -30,7 +30,7 @@ var path = {
 gulp.task('sass', function() {
   return gulp.src(['./assets/stylesheets/**/**.scss'])
   .pipe(plumber())
-  .pipe(sass(/*{outputStyle: 'compressed'}*/)
+  .pipe(sass({outputStyle: 'compressed'})
   .on('error', sass.logError))
     .pipe(gulp.dest('./docs/css'))
 });

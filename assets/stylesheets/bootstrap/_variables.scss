@@ -3,6 +3,12 @@ $bootstrap-sass-asset-helper: false !default;
 // Variables
 // --------------------------------------------------
 
+// Enabled Conponents
+$btn-box-shadow-enabled:         true  !default;
+$btn-outline-enabled:            true  !default;
+$grid-sm-enabled:                true  !default;
+$grid-md-enabled:               false  !default;
+$grid-lg-enabled:               false  !default;
 
 //== Colors
 //
@@ -15,7 +21,7 @@ $gray:                   lighten($gray-base, 33.5%) !default; // #555
 $gray-light:             lighten($gray-base, 46.7%) !default; // #777
 $gray-lighter:           lighten($gray-base, 93.5%) !default; // #eee
 
-$brand-primary:         #0275d8 !default; // #337ab7
+$brand-primary:         #0275d8 !default;
 $brand-success:         #5cb85c !default;
 $brand-info:            #5bc0de !default;
 $brand-warning:         #f0ad4e !default;
@@ -174,8 +180,6 @@ $table-border-color:            #ddd !default;
 //## For each of Bootstrap's buttons, define text, background and border color.
 
 $btn-font-weight:                normal !default;
-$btn-box-shadow-enabled:         true   !default;
-$btn-outline-enabled:            true  !default;
 
 $btn-default-color:              #333 !default;
 $btn-default-bg:                 #fff !default;
@@ -396,19 +400,17 @@ $grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
 $container-tablet:             (720px + $grid-gutter-width) !default;
 //** For `$screen-sm-min` and up.
 $container-sm:                 $container-tablet !default;
-$grid-sm-enabled:               true;
+
 
 // Medium screen / desktop
 $container-desktop:            (940px + $grid-gutter-width) !default;
 //** For `$screen-md-min` and up.
 $container-md:                 $container-desktop !default;
-$grid-md-enabled:               false;
 
 // Large screen / wide desktop
 $container-large-desktop:      (1140px + $grid-gutter-width) !default;
 //** For `$screen-lg-min` and up.
 $container-lg:                 $container-large-desktop !default;
-$grid-lg-enabled:               false;
 
 
 //== Navbar

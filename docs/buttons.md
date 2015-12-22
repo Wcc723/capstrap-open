@@ -154,21 +154,21 @@ Have a hankering for a series of buttons that are attached to one another? Wrap 
 
 {% example html %}
 <div class="btn-group">
-  <button class="btn" type="button">Button</button>
-  <button class="btn" type="button">Button</button>
-  <button class="btn" type="button">Button</button>
+  <button class="btn btn-primary" type="button">Button</button>
+  <button class="btn btn-primary" type="button">Button</button>
+  <button class="btn btn-danger" type="button">Button</button>
 </div>
 
 <div class="btn-group">
-  <button class="btn btn-outline" type="button">Button</button>
-  <button class="btn btn-outline" type="button">Button</button>
-  <button class="btn btn-outline" type="button">Button</button>
+  <button class="btn btn-primary-outline" type="button">Button</button>
+  <button class="btn btn-primary-outline" type="button">Button</button>
+  <button class="btn btn-danger-outline" type="button">Button</button>
 </div>
 
 <div class="btn-group">
-  <button class="btn btn-sm" type="button">Button</button>
-  <button class="btn btn-sm" type="button">Button</button>
-  <button class="btn btn-sm" type="button">Button</button>
+  <button class="btn btn-sm btn-primary" type="button">Button</button>
+  <button class="btn btn-sm btn-success" type="button">Button</button>
+  <button class="btn btn-sm btn-danger" type="button">Button</button>
 </div>
 {% endexample %}
 
